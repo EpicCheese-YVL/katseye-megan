@@ -44,7 +44,12 @@
       transform: scale(1.02);
     }
 
-    /* Mobile: 3 per row */
+    /* utility */
+    .hide-mobile {
+      display: none;
+    }
+
+    /* Mobile layout */
     @media (max-width: 600px) {
       .row {
         grid-template-columns: repeat(3, 1fr);
@@ -130,6 +135,26 @@
     <a href="https://www.instagram.com/p/DNlPSMVzCxA/" target="_blank"><img src="img8.jpg"></a>
     <a href="https://www.instagram.com/p/DNlPSMVzCxA/" target="_blank"><img src="img8.jpg"></a>
   </div>
+
+  <!-- MOBILE LOGIC -->
+  <script>
+    function applyMobileLimit() {
+      const isMobile = window.innerWidth <= 600;
+
+      document.querySelectorAll('.row').forEach(row => {
+        row.querySelectorAll('a').forEach((item, index) => {
+          if (isMobile && index >= 3) {
+            item.classList.add('hide-mobile');
+          } else {
+            item.classList.remove('hide-mobile');
+          }
+        });
+      });
+    }
+
+    applyMobileLimit();
+    window.addEventListener('resize', applyMobileLimit);
+  </script>
 
 </body>
 </html>
