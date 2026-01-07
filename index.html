@@ -1,110 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Megan</title>
-<style>
-body {
-  margin: 0;
-  background: black;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  padding: 6px;
-}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery</title>
 
-.row {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 6px;
-}
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-.row a img {
-  width: 100%;
-  object-fit: contain; /* preserves original aspect ratio */
-  display: block;
-  transition: filter 0.3s ease;
-  filter: grayscale(100%);
-}
+    body {
+      background: #000;
+      padding: 6px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
 
-.row a img:hover {
-  filter: grayscale(0%);
-}
-</style>
+    .row {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 6px;
+    }
+
+    a {
+      display: block;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain;
+      filter: grayscale(100%);
+      transition: filter 0.25s ease, transform 0.25s ease;
+    }
+
+    img:hover {
+      filter: grayscale(0%);
+      transform: scale(1.02);
+    }
+
+    /* Mobile: 3 per row */
+    @media (max-width: 600px) {
+      .row {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      body {
+        padding: 4px;
+        gap: 4px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-<!-- ROW 1 -->
-<div class="row">
-  <a href="https://www.instagram.com/p/DSiRfW3j0kZ/" target="_blank"><img src="img1.jpg" alt=""></a>
-  <a href="https://www.instagram.com/p/DSiRfW3j0kZ/" target="_blank"><img src="img1.jpg" alt=""></a>
-  <a href="https://www.instagram.com/p/DSiRfW3j0kZ/" target="_blank"><img src="img1.jpg" alt=""></a>
-  <a href="https://www.instagram.com/p/DSiRfW3j0kZ/" target="_blank"><img src="img1.jpg" alt=""></a>
-  <a href="https://www.instagram.com/p/DSiRfW3j0kZ/" target="_blank"><img src="img1.jpg" alt=""></a>
-</div>
+  <!-- ROW 1 -->
+  <div class="row">
+    <a href="https://www.instagram.com/p/DSiRfW3j0kZ/" target="_blank"><img src="img1.jpg"></a>
+    <a href="https://www.instagram.com/p/DSiRfW3j0kZ/" target="_blank"><img src="img1.jpg"></a>
+    <a href="https://www.instagram.com/p/DSiRfW3j0kZ/" target="_blank"><img src="img1.jpg"></a>
+    <a href="https://www.instagram.com/p/DSiRfW3j0kZ/" target="_blank"><img src="img1.jpg"></a>
+    <a href="https://www.instagram.com/p/DSiRfW3j0kZ/" target="_blank"><img src="img1.jpg"></a>
+  </div>
 
-<!-- ROW 2 -->
-<div class="row">
-  <a href="https://www.instagram.com/p/DSNryYcktkp/" target="_blank"><img src="img2.jpg" alt=""></a>
-  <a href="https://www.instagram.com/p/DSNryYcktkp/" target="_blank"><img src="img2.jpg" alt=""></a>
-  <a href="https://www.instagram.com/p/DSNryYcktkp/" target="_blank"><img src="img2.jpg" alt=""></a>
-  <a href="https://www.instagram.com/p/DSNryYcktkp/" target="_blank"><img src="img2.jpg" alt=""></a>
-  <a href="https://www.instagram.com/p/DSNryYcktkp/" target="_blank"><img src="img2.jpg" alt=""></a>
-</div>
+  <!-- ROW 2 -->
+  <div class="row">
+    <a href="https://www.instagram.com/p/DSNryYcktkp/" target="_blank"><img src="img2.jpg"></a>
+    <a href="https://www.instagram.com/p/DSNryYcktkp/" target="_blank"><img src="img2.jpg"></a>
+    <a href="https://www.instagram.com/p/DSNryYcktkp/" target="_blank"><img src="img2.jpg"></a>
+    <a href="https://www.instagram.com/p/DSNryYcktkp/" target="_blank"><img src="img2.jpg"></a>
+    <a href="https://www.instagram.com/p/DSNryYcktkp/" target="_blank"><img src="img2.jpg"></a>
+  </div>
 
-<!-- ROW 3 -->
-<div class="row">
-  <a href="https://www.instagram.com/p/DSAu2rxD6L-/" target="_blank"><img src="img3.jpg" alt=""></a>
-  <a href="https://www.instagram.com/p/DSAu2rxD6L-/" target="_blank"><img src="img3.jpg" alt=""></a>
-  <a href="https://www.instagram.com/p/DSAu2rxD6L-/" target="_blank"><img src="img3.jpg" alt=""></a>
-  <a href="https://www.instagram.com/p/DSAu2rxD6L-/" target="_blank"><img src="img3.jpg" alt=""></a>
-  <a href="https://www.instagram.com/p/DSAu2rxD6L-/" target="_blank"><img src="img3.jpg" alt=""></a>
-</div>
+  <!-- ROW 3 -->
+  <div class="row">
+    <a href="https://www.instagram.com/p/DSAu2rxD6L-/" target="_blank"><img src="img3.jpg"></a>
+    <a href="https://www.instagram.com/p/DSAu2rxD6L-/" target="_blank"><img src="img3.jpg"></a>
+    <a href="https://www.instagram.com/p/DSAu2rxD6L-/" target="_blank"><img src="img3.jpg"></a>
+    <a href="https://www.instagram.com/p/DSAu2rxD6L-/" target="_blank"><img src="img3.jpg"></a>
+    <a href="https://www.instagram.com/p/DSAu2rxD6L-/" target="_blank"><img src="img3.jpg"></a>
+  </div>
 
-<!-- ROW 4 -->
-<div class="row">
-  <a href="https://www.instagram.com/p/DRO90OxDuPM/" target="_blank"><img src="img4.jpg" alt=""></a>
-  <a href="https://www.instagram.com/p/DRO90OxDuPM/" target="_blank"><img src="img4.jpg" alt=""></a>
-  <a href="https://www.instagram.com/p/DRO90OxDuPM/" target="_blank"><img src="img4.jpg" alt=""></a>
-  <a href="https://www.instagram.com/p/DRO90OxDuPM/" target="_blank"><img src="img4.jpg" alt=""></a>
-  <a href="https://www.instagram.com/p/DRO90OxDuPM/" target="_blank"><img src="img4.jpg" alt=""></a>
-</div>
+  <!-- ROW 4 -->
+  <div class="row">
+    <a href="https://www.instagram.com/p/DRO90OxDuPM/" target="_blank"><img src="img4.jpg"></a>
+    <a href="https://www.instagram.com/p/DRO90OxDuPM/" target="_blank"><img src="img4.jpg"></a>
+    <a href="https://www.instagram.com/p/DRO90OxDuPM/" target="_blank"><img src="img4.jpg"></a>
+    <a href="https://www.instagram.com/p/DRO90OxDuPM/" target="_blank"><img src="img4.jpg"></a>
+    <a href="https://www.instagram.com/p/DRO90OxDuPM/" target="_blank"><img src="img4.jpg"></a>
+  </div>
 
-<!-- ROW 5 -->
-<div class="row">
-  <a href="https://www.instagram.com/p/DQg6MF1jFtW/" target="_blank"><img src="img5.jpg" alt=""></a>
-  <a href="https://www.instagram.com/p/DQg6MF1jFtW/" target="_blank"><img src="img5.jpg" alt=""></a>
-  <a href="https://www.instagram.com/p/DQg6MF1jFtW/" target="_blank"><img src="img5.jpg" alt=""></a>
-  <a href="https://www.instagram.com/p/DQg6MF1jFtW/" target="_blank"><img src="img5.jpg" alt=""></a>
-  <a href="https://www.instagram.com/p/DQg6MF1jFtW/" target="_blank"><img src="img5.jpg" alt=""></a>
-</div>
+  <!-- ROW 5 -->
+  <div class="row">
+    <a href="https://www.instagram.com/p/DQg6MF1jFtW/" target="_blank"><img src="img5.jpg"></a>
+    <a href="https://www.instagram.com/p/DQg6MF1jFtW/" target="_blank"><img src="img5.jpg"></a>
+    <a href="https://www.instagram.com/p/DQg6MF1jFtW/" target="_blank"><img src="img5.jpg"></a>
+    <a href="https://www.instagram.com/p/DQg6MF1jFtW/" target="_blank"><img src="img5.jpg"></a>
+    <a href="https://www.instagram.com/p/DQg6MF1jFtW/" target="_blank"><img src="img5.jpg"></a>
+  </div>
 
-<!-- ROW 6 -->
-<div class="row">
-  <a href="https://www.instagram.com/p/DNasZNhREDq/" target="_blank"><img src="img6.jpg" alt=""></a>
-  <a href="https://www.instagram.com/p/DNasZNhREDq/" target="_blank"><img src="img6.jpg" alt=""></a>
-  <a href="https://www.instagram.com/p/DNasZNhREDq/" target="_blank"><img src="img6.jpg" alt=""></a>
-  <a href="https://www.instagram.com/p/DNasZNhREDq/" target="_blank"><img src="img6.jpg" alt=""></a>
-  <a href="https://www.instagram.com/p/DNasZNhREDq/" target="_blank"><img src="img6.jpg" alt=""></a>
-</div>
+  <!-- ROW 6 -->
+  <div class="row">
+    <a href="https://www.instagram.com/p/DNasZNhREDq/" target="_blank"><img src="img6.jpg"></a>
+    <a href="https://www.instagram.com/p/DNasZNhREDq/" target="_blank"><img src="img6.jpg"></a>
+    <a href="https://www.instagram.com/p/DNasZNhREDq/" target="_blank"><img src="img6.jpg"></a>
+    <a href="https://www.instagram.com/p/DNasZNhREDq/" target="_blank"><img src="img6.jpg"></a>
+    <a href="https://www.instagram.com/p/DNasZNhREDq/" target="_blank"><img src="img6.jpg"></a>
+  </div>
 
-<!-- ROW 7 -->
-<div class="row">
-  <a href="https://www.instagram.com/p/C-IntaAPwvF/" target="_blank"><img src="img7.jpg" alt=""></a>
-  <a href="https://www.instagram.com/p/C-IntaAPwvF/" target="_blank"><img src="img7.jpg" alt=""></a>
-  <a href="https://www.instagram.com/p/C-IntaAPwvF/" target="_blank"><img src="img7.jpg" alt=""></a>
-  <a href="https://www.instagram.com/p/C-IntaAPwvF/" target="_blank"><img src="img7.jpg" alt=""></a>
-  <a href="https://www.instagram.com/p/C-IntaAPwvF/" target="_blank"><img src="img7.jpg" alt=""></a>
-</div>
+  <!-- ROW 7 -->
+  <div class="row">
+    <a href="https://www.instagram.com/p/C-IntaAPwvF/" target="_blank"><img src="img7.jpg"></a>
+    <a href="https://www.instagram.com/p/C-IntaAPwvF/" target="_blank"><img src="img7.jpg"></a>
+    <a href="https://www.instagram.com/p/C-IntaAPwvF/" target="_blank"><img src="img7.jpg"></a>
+    <a href="https://www.instagram.com/p/C-IntaAPwvF/" target="_blank"><img src="img7.jpg"></a>
+    <a href="https://www.instagram.com/p/C-IntaAPwvF/" target="_blank"><img src="img7.jpg"></a>
+  </div>
 
-<!-- ROW 8 -->
-<div class="row">
-  <a href="https://www.instagram.com/p/DNlPSMVzCxA/" target="_blank"><img src="img8.jpg" alt=""></a>
-  <a href="https://www.instagram.com/p/DNlPSMVzCxA/" target="_blank"><img src="img8.jpg" alt=""></a>
-  <a href="https://www.instagram.com/p/DNlPSMVzCxA/" target="_blank"><img src="img8.jpg" alt=""></a>
-  <a href="https://www.instagram.com/p/DNlPSMVzCxA/" target="_blank"><img src="img8.jpg" alt=""></a>
-  <a href="https://www.instagram.com/p/DNlPSMVzCxA/" target="_blank"><img src="img8.jpg" alt=""></a>
-</div>
+  <!-- ROW 8 -->
+  <div class="row">
+    <a href="https://www.instagram.com/p/DNlPSMVzCxA/" target="_blank"><img src="img8.jpg"></a>
+    <a href="https://www.instagram.com/p/DNlPSMVzCxA/" target="_blank"><img src="img8.jpg"></a>
+    <a href="https://www.instagram.com/p/DNlPSMVzCxA/" target="_blank"><img src="img8.jpg"></a>
+    <a href="https://www.instagram.com/p/DNlPSMVzCxA/" target="_blank"><img src="img8.jpg"></a>
+    <a href="https://www.instagram.com/p/DNlPSMVzCxA/" target="_blank"><img src="img8.jpg"></a>
+  </div>
 
 </body>
 </html>
